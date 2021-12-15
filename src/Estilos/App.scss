@@ -1,0 +1,151 @@
+// VARIABLES DE COLORES
+  // Globales
+  $color-amarilloPrincipal: #f5ba13;
+  $color-fondoGris: #eee;
+  $color-fondoBlanco: white;
+  $color-fondoGrisTooltip: #414141;
+
+
+  // Botones
+  $color-amarilloBoton: #f0b000;
+  $color-amarilloHover: #fdc019;
+  $color-amarilloFocus: #d39f10;
+
+  // Input
+  $color-inputInactivo: #979797;
+  $color-inputActivo: #d39f10;
+  $color-sombraInputActivo: #f0b000;
+
+  // Texto
+  $color-textoError: #ca2121;
+  $color-link: #0202c7;
+  $color-linkHover: blue;
+  $color-textoInput: #222222;
+  $color-placeholderActivo: #d39f10;
+  $color-textofooter: #ccc;
+
+
+// Estilos globales
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Montserrat", sans-serif;
+}
+
+body {
+  background: $color-fondoGris;
+  padding: 0 1rem;
+}
+
+// Generales
+.no-seleccionable {
+  user-select: none;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+}
+
+.body-edicion {
+  margin: 0;
+  padding: 0;
+  background-color: #00000086;
+  z-index: -1;
+}
+
+.foto-usuario {
+  height: 40px;
+  width:  45px;
+}
+
+.boton-con-texto {
+  display: block;
+  cursor: pointer;
+  margin: 0 auto;
+  width: 150px;
+  height: 50px;
+  background-color: $color-amarilloBoton;
+  border: 2px solid $color-amarilloBoton;
+  color: white;
+  font-size: 1.2rem;
+  font-weight: 500;
+  outline: none;
+  border-radius: 6px;
+    -webkit-border-radius: 6px;
+    -moz-border-radius: 6px;
+    -ms-border-radius: 6px;
+    -o-border-radius: 6px;  
+
+  &:hover {
+    background-color: $color-amarilloHover;
+    border: 2px solid $color-amarilloHover;
+  }
+
+  &:active/*,
+  &:focus */ {
+    background-color: $color-amarilloFocus;
+    border: 2px solid $color-amarilloFocus;
+    transform: scale(0.98);
+      -webkit-transform: scale(0.98);
+      -moz-transform: scale(0.98);
+      -ms-transform: scale(0.98);
+      -o-transform: scale(0.98);
+  }
+}
+
+.tooltip {
+  position: relative;
+  display: inline-block;
+   
+  .texto-tooltip {
+    visibility: hidden;
+    background-color: $color-fondoGrisTooltip;
+    color: white;
+    text-align: center;
+    padding: 7px 0;
+    border-radius: 6px;
+    
+    /*Posicion*/
+    position: absolute;
+    z-index: 1;
+    width: 70px;
+    top: 135%;
+    left: 50%;
+    margin-left: -35px; /*Usar la mitad del width (70 / 2 = 35px), para centrar la ventanita */
+    
+    // opacity: 0;
+    // animation: popup 1s linear 1s backwards;
+  }
+  
+  &:hover .texto-tooltip {
+    visibility: visible;
+    opacity: 1;
+  }
+}
+
+.incorrecto {
+  font-size: 0.8rem;
+  font-weight: 500;
+  color: $color-textoError;
+}
+
+.sin-evento {
+  pointer-events: none;
+  cursor: default;
+}
+
+.amarillo { /* Para el icono de carga al subir imagen */
+  color: $color-amarilloPrincipal;
+}
+
+
+@import './areaNuevaNota';
+@import './cuerpoNotas';
+@import './footer';
+@import './header';
+@import './ingreso';
+@import './nota';
+@import './perfil';
+@import './modal';

@@ -1,0 +1,124 @@
+.perfil {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  h2, h3 {
+    margin-bottom: 20px;
+  }
+
+  h2 {
+    padding-top: 60px;
+  }
+
+  p {
+    padding-top: 35px;
+  }
+
+  
+  [type="file"] { // Input de imagen seleccionado asi
+    // Lo siguiente teoricamente lo haria invisible sin afectar su funcionalidad
+    // border: 0;
+    // clip: rect(0, 0, 0, 0);
+    // height: 1px;
+    // overflow: hidden;
+    // padding: 0;
+    // position: absolute;
+    // white-space: nowrap;
+    // width: 1px;
+
+    display: none; // Al parecer esto tampoco afecta su funcionalidad...
+  }
+
+  .foto-usuario {
+    border-radius: 50%;
+    box-shadow: 0 2px 5px #ccc;
+    width:  200px;
+    height: 200px;
+    object-fit: cover;
+    margin-top: 2rem;
+  }
+
+  .botones-foto {
+    width: 200px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-bottom: 50px;
+    
+    .label-foto { // Boton 'subir imagen'
+      color: $color-amarilloBoton;
+      font-size: 1.5rem;
+      background-color: white;
+      padding: 10px 13px;
+      border-radius: 50%;
+      box-shadow: 0 2px 5px #ccc;
+      cursor: pointer;
+  
+      &:hover {
+        color: $color-amarilloHover;
+      }
+      &:active {
+        color: $color-amarilloFocus;
+      }
+    }
+    
+    .borrar-imagen {
+      font-size: 1.3rem;
+      color: #424242;
+      cursor: pointer;
+      align-self: flex-end;
+    }
+  }
+
+  .botones-perfil {
+    display: flex;
+    justify-content: space-between;
+
+    .boton-con-texto {
+      margin: 2px;
+    }
+  }
+
+  .nombre {
+    display: flex;
+    margin-left: 10px;
+
+    .btn-editar-nombre {
+      margin-left: 10px;
+      color: $color-amarilloBoton;
+      font-size: 1.2rem;
+      cursor: pointer;
+    
+      &:hover {
+        color: $color-amarilloHover;
+      }
+      &:active {
+        color: $color-amarilloFocus;
+      }
+    }
+  }
+
+  input {
+    border: none;
+    font-size: 1.2rem;
+    font-weight: 600
+  }
+
+  .datos-generales h3 {
+    margin: 2rem auto;
+    color: #616161;
+    font-weight: 500;
+  }
+
+  .backdrop {
+    z-index: 10;
+  }
+}
+
+.separador {
+  width: 50%;
+  margin: 4rem auto;
+  border-bottom: 2px solid lightgray;
+}
+

@@ -1,0 +1,92 @@
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: $color-amarilloPrincipal;
+  margin: auto -16px;
+  padding: 16px 32px;
+  box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.3);
+  cursor: default;
+
+  .zona-titulo {
+    display: flex;
+    align-items: center;
+    padding-left: 1.5rem;
+    h1 {
+      color: $color-fondoBlanco;
+      font-family: "McLaren", cursive;
+      font-weight: 200;
+      margin-left: 1rem;
+    }
+
+    img {
+      width: 3rem;
+      cursor: help;
+    }
+  }
+  
+
+  .item {
+    display: block;
+    color: #000;
+    font-size: 1.1rem;
+    cursor: pointer;
+    text-align: center;
+    
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+
+  .usuario-header {
+    display: flex;
+    align-items: center;
+
+    .foto-usuario {
+      border-radius: 50%;
+      border: 1px solid lightgray;
+      cursor: pointer;
+    }
+  
+    .flecha-menu {
+      font-size: 1.5rem; // Tamaño del icono
+      cursor: pointer;
+      margin-left: 10px;
+      color: #242424;
+    }
+  }  
+
+  .tooltip { // Solo para que se sobreponga al modo de 'carga de imagen'
+    .texto-tooltip {
+      z-index: 99;
+    }
+  }
+
+  
+}
+
+  .menu {
+    // position: absolute;
+    // left: 88%;
+    // top: 10%;
+    // padding: 20px;
+    // width: 10%;
+    // background-color: darkgrey;
+    // display: flex;
+    // flex-direction: column;
+    // justify-content: space-evenly;
+    display: flex;
+    align-items: center;
+    margin-right: 20px;
+
+    .item {
+      margin-left: 20px;
+      color: white;
+      font-size: 1.8rem; 
+    }
+  }
+
+.easter-egg {
+  width: 100%;
+  height: 100%;
+}

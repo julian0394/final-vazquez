@@ -1,0 +1,118 @@
+.contenedor-ingreso {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 600px;
+  background: $color-fondoBlanco;
+  box-shadow: 0 2px 5px #ccc;
+  border-radius: 7px;
+    -webkit-border-radius: 7px;
+    -moz-border-radius: 7px;
+    -ms-border-radius: 7px;
+    -o-border-radius: 7px;
+  margin: 60px auto;
+  padding: 1.5rem 0;
+
+  h1 {
+    font-size: 1.5rem;
+    margin: 50px 0 60px;
+  }
+}
+
+.input-form {
+  margin-bottom: 45px;
+  position: relative;
+  background-color: transparent;
+
+  input,
+  input:placeholder-shown { 
+    color: $color-textoInput;
+    width: 100%;
+    border: 1.5px solid $color-inputInactivo;
+    box-shadow: 0px 0px 1px 1px #979797;
+    padding: 10px;
+    outline: none;
+    font-size: 1.1rem;
+    border-radius: 3px;
+      -webkit-border-radius: 3px;
+      -moz-border-radius: 3px;
+      -ms-border-radius: 3px;
+      -o-border-radius: 3px;
+    z-index: 2;
+  }
+
+  input:focus {
+    box-shadow: 0px 0px 1px 1px $color-sombraInputActivo;
+    border: 1.5px solid $color-inputActivo;
+  }
+
+  label {
+    position: absolute;
+    pointer-events: none;
+    top: 13px;
+    left: 10px;
+    color: gray;
+    font-weight: 200;
+    text-align: center;
+    font-size: 1rem;
+    margin-bottom: 10px;
+    transition: 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55); /*SIMILAR A UN EASE-IN CON EFECTO BOUNCE*/
+      -webkit-transition: 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+      -moz-transition: 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+      -ms-transition: 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+      -o-transition: 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    z-index: 2;
+  }
+
+  input:focus + label,
+  input:active + label,
+  input:not(:placeholder-shown) + label { /*LO MANTIENE CUANDO NO ES VISIBLE EL PH (osea si hay algo escrito)*/
+    color: $color-placeholderActivo;
+    font-size: 0.8rem;
+    font-weight: 500;
+    background-color: $color-fondoBlanco;
+    transform: translateY(-20px);
+      -webkit-transform: translateY(-20px);
+      -moz-transform: translateY(-20px);
+      -ms-transform: translateY(-20px);
+      -o-transform: translateY(-20px);
+    padding: 0 5px;
+  }
+}
+
+.contenedor-ingreso {
+  .registroEInicio {
+    font-size: 1rem;
+    margin-bottom: 60px;
+  }
+  
+  a {
+    color: $color-link;
+    text-decoration: none;
+    font-style: italic;
+    margin-left: 3px;
+
+    &:focus {
+      color: $color-linkHover;
+    }
+  }
+}
+ 
+.error-input {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 30px;
+  margin-top: -25px;
+  width: 120%;
+
+  .icono-error-input {
+    font-size: 1.6rem;
+    color: $color-textoError;
+    padding-right: 10px;
+  }
+}
+
+.btn-ingreso {
+  margin-bottom: 40px;
+}
